@@ -205,7 +205,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         event_hub = os.environ['EVENT_HUB']
         eh_prod_client = EventHubProducerClient(
             fully_qualified_namespace=namespace,
-            eventhub_name=eh_name,
+            eventhub_name=event_hub,
             credential=credentials)
     else:
         # Key Vault stuff
